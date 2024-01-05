@@ -1,0 +1,161 @@
+:root {
+  /* Primary Color */
+  --Strong-cyan: hsl(172, 67%, 45%);
+  /* Neutrals */
+  --Very-dark-cyan: hsl(183, 100%, 15%);
+  --Dark-grayish-cyan: hsl(186, 14%, 43%);
+  --Grayish-cyan: hsl(184, 14%, 56%);
+  --Light-grayish-cyan: hsl(185, 41%, 84%);
+  --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --White: hsl(0, 0%, 100%);
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 1440px;
+  min-width: 375px;
+  min-height: 100vh;
+  margin: 0 auto;
+  background-color: var(--Light-grayish-cyan);
+  display: grid;
+  place-content: center center;
+  font-family: 'Space Mono', sans-serif;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#root img {
+  margin-bottom: 3.5rem;
+  max-width: 100%;
+}
+
+input, button, a {
+  font-family: 'Space Mono', sans-serif;
+  font-size: 1.5rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background-color: var(--White);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+form .inputs p {
+  margin-bottom: 0.5rem;
+  color: var(--Dark-grayish-cyan);
+}
+
+form .inputs p:not(form .inputs p:first-of-type) {
+  margin-top: 2.25rem;
+}
+
+form input {
+  background-color: var(--Very-light-grayish-cyan);
+  border: none;
+  border-radius: 0.25rem;
+  color: var(--Very-dark-cyan);
+  text-align: right;
+  padding: 0.25rem 0.75rem;
+}
+
+form input:focus {
+  outline-color: var(--Strong-cyan);
+  border-color: var(--Strong-cyan);
+}
+
+form .icon-input-wrapper {
+  position: relative;
+}
+
+form .icon-input-wrapper img {
+  position: absolute;
+  left: 12px;
+  top: 14px;
+  bottom: 0;
+}
+
+form .btns-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+form .btns-wrapper a {
+  background-color: var(--Very-dark-cyan);
+  color: var(--White);
+  text-align: center;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+form .btns-wrapper a:hover {
+  background-color: var(--Strong-cyan);
+  color: var(--Very-dark-cyan);
+}
+
+form .btns-wrapper a.active {
+  background-color: var(--Strong-cyan);
+  color: var(--Very-dark-cyan);
+}
+
+form .btns-wrapper input {
+  max-width: 90px;
+}
+
+form .results {
+  background-color: var(--Very-dark-cyan);
+  padding: 2rem 3rem;
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+
+form .results .tip-person, form .results .total-person {
+  display: flex;
+  gap: 5rem;
+  align-items: center;
+}
+
+form .results .tip-person .person-text p, form .results .total-person .total-text p {
+  color: var(--White);
+}
+
+form .results .tip-person .person-text .sub-text, form .results .total-person .total-text .sub-text {
+  color: var(--Grayish-cyan);
+}
+
+form .results .tip-person .person-amount h1, form .results .total-person .total-amount h1 {
+  color: var(--Strong-cyan);
+}
+
+form .results button {
+  margin-top: auto;
+  border: none;
+  border-radius: .25rem;
+  background-color: var(--Strong-cyan);
+  color: var(--Very-dark-cyan);
+  padding-block: 0.5rem;
+  cursor: pointer;
+}
+
+@media (min-width: 750px) {
+  .form {
+    flex-direction: row;
+  }
+}
